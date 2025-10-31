@@ -23,7 +23,7 @@ data class Curso(
 data class Modulo(val nome: String)
 
 /*A classe Usuario poderia ter muitos parametros acrescentados em caso de um programa usual, número de
- * documento, matricula, idade, e demais dados de cadastro chamando
+ * documento, idade, e demais dados de cadastro chamando
  * uma função POO para validar dados, bem como usuários do próprio sistema*/
 
 data class Usuario(val nome: String, val cursosInscritos: List<Curso>, val moduloInscrito: List<Modulo>)
@@ -42,7 +42,6 @@ fun main() {
     val cursoAvancado = Curso(NivelCurso.AVANÇADO, 3, modulos)
     
     //cadastrando os primeiros usuarios
-    //o cadastro poder
   
     val usuario1 = Usuario("João", listOf(cursoBasico), listOf(modulos[2]))
     val usuario2 = Usuario("Maria", listOf(cursoIntermediario), listOf(modulos[0]))
