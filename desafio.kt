@@ -45,8 +45,16 @@ fun main() {
      * diferente usando a base das classes*/
     println("Cursos de Inglês da Instituição YeasyTell:")
     instituicaoCursos.forEach { 
-        curso ->println("(${curso.nivel}${curso.duracaoMeses} meses)")
-        curso.modulos.forEach { modulo ->println(" - ${modulo.nome}")}
+        curso ->println("${curso.nivel} ${curso.duracaoMeses} meses")
+        if(curso.nivel == NivelCurso.BÁSICO){
+           curso.modulos.forEach { modulo ->println(" - ${modulo.nome}")}
+        }
+        if(curso.nivel == NivelCurso.INTERMEDIÁRIO){
+           curso.modulos.forEach { modulo ->println(" - ${modulo.nome}")}
+        }
+        if(curso.nivel == NivelCurso.AVANÇADO){
+           curso.modulos.forEach { modulo ->println(" - ${modulo.nome}")}
+        }
     }
     // Listando os usuários, nível do curso e modulo   
     println("\nUsuários e seus cursos e módulos inscritos:\n")
